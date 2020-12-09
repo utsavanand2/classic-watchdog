@@ -191,6 +191,7 @@ func pipeRequest(config *WatchdogConfig, w http.ResponseWriter, r *http.Request,
 	}
 
 	if len(config.contentType) > 0 {
+		log.Printf("ContentType from the config: %q", config.contentType)
 		w.Header().Set("Content-Type", config.contentType)
 	} else {
 
